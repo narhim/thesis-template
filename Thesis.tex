@@ -38,17 +38,17 @@
 %% ----------------------------------------------------------------
 \setboolean  {proposal}{false} % disables all stuff that is not needed for a proposal if set to true
 \university  {Saarland University}{http://www.uni-saarland.de/}
-\department  {Department of Computer Science}{http://www.cs.uni-saarland.de/}
-\group       {Software Engineering Chair}{http://www.st.cs.uni-saarland.de/}
-\faculty     {Faculty of Natural Sciences and Technology I}{http://www.uni-saarland.de/en/campus/faculties/faculties/faculty-6-natural-sciences-and-technology-i.html}
-\supervisor  {Your Supervisor}
-\advisor     {Your Advisor}
+\department  {Department of Language Science and Technology}{https://www.uni-saarland.de/en/department/lst.html}
+\group       {Chair}{http://www.st.cs.uni-saarland.de/}
+\faculty     {Faculty of Philosophy}{https://www.uni-saarland.de/fakultaet/p.html}
+\supervisor  {Prof. Vera Demberg}
+\advisor     {Dr. Lucia Donatelli}
 \examiner    {Who will be grading your thesis}
 \secondexaminer {The second person grading your thesis}
-\degree      {Master of Science}
+\degree      {Master of Language Science and Technology}
 \thesiskind  {Master Thesis}
-\authors     {Your name}
-\thesistitle {The title of your thesis}
+\authors     {Teresa Rosa Martín Soeder}
+\thesistitle {Veridicality Annotations in Spanish}
 \date        {\today}
 %\subject     {}
 %\keywords    {}
@@ -56,15 +56,15 @@
 
 % If this is a proposal prepend 'Proposal for a' to thesiskind
 \doifproposal{
-	\let\thesisnameproposal\thesisname
-	\thesiskind{Proposal for a \thesisnameproposal}
+  \let\thesisnameproposal\thesisname
+  \thesiskind{Proposal for a \thesisnameproposal}
 }
 
 % Enable git revision parsing (Note: you need to enable shell-excape and pipe support for this feature to work)
 %\revision{\input{|"git rev-parse HEAD | cut -c 1-8"}}
 
 \begin{document}
-\frontmatter	  % Begin Roman style (i, ii, iii, iv...) page numbering
+\frontmatter    % Begin Roman style (i, ii, iii, iv...) page numbering
 
 %% Title Page
 %% ----------------------------------------------------------------
@@ -123,7 +123,7 @@
 %% The Abstract Page
 %% ----------------------------------------------------------------
 \begin{abstract}
-	\input{\chapterpath Abstract}
+  \input{\chapterpath Abstract}
 \end{abstract}
 
 \doifnotproposal{
@@ -151,16 +151,17 @@ Thx Mom+Dad $<3$
   \dedicatory{Dedicated to WHATEVER.}
 }
 
-\mainmatter	  % Begin normal, numeric (1,2,3...) page numbering
+\mainmatter   % Begin normal, numeric (1,2,3...) page numbering
 
 %% Chapters
 %% ----------------------------------------------------------------
 % Include the chapters of the thesis, as separate files (careful of case-sensitivity and spaces in filenames)
 % Capitalized chaptertitles generally look better
 
-\loadchapter{Introduction}{This is a Chapter title}
-\loadchapter{Motivation}{Motivation}
-
+\loadchapter{introduction}{Introduction}
+\loadchapter{pilot_study}{Pilot Study}
+\loadchapter{main_study}{Main Study}
+\loadchapter{conclusions}{Conclusions}
 
 \clearpage
 
@@ -168,7 +169,7 @@ Thx Mom+Dad $<3$
 %% ----------------------------------------------------------------
 \appendix
 
-%\input{./Appendices/AppendixA}	% Appendix Title
+%\input{./Appendices/AppendixA} % Appendix Title
 
 %\input{./Appendices/AppendixB} % Appendix Title
 
@@ -180,15 +181,15 @@ Thx Mom+Dad $<3$
 %% Lists of figures and tables
 %% ----------------------------------------------------------------
 \doifnotproposal{
-	\lhead{\emph{List of Figures}}
-	\addtotoc{List of Figures}
-	\listoffigures
-	\clearpage
+  \lhead{\emph{List of Figures}}
+  \addtotoc{List of Figures}
+  \listoffigures
+  \clearpage
 
-  	\addtotoc{List of Tables}
-  	\lhead{\emph{List of Tables}}
-	\listoftables
-	\clearpage
+    \addtotoc{List of Tables}
+    \lhead{\emph{List of Tables}}
+  \listoftables
+  \clearpage
 }
 
 %% Bibliography
