@@ -1,100 +1,579 @@
-@inproceedings{baxter,
-author = {Baxter, Ira D. and Yahin, Andrew and Moura, Leonardo and Sant'Anna, Marcelo and Bier, Lorraine},
-title = {Clone Detection Using Abstract Syntax Trees},
-booktitle = {Proceedings of the International Conference on Software Maintenance},
-series = {ICSM '98},
-year = {1998},
-isbn = {0-8186-8779-7},
-pages = {368--},
-url = {http://dl.acm.org/citation.cfm?id=850947.853341},
-acmid = {853341},
-publisher = {IEEE Computer Society},
-address = {Washington, DC, USA},
-keywords = {Software maintenance, clone detection, software evaluation, Design Maintenance System},
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%    DATASETS     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@inproceedings{de2019commitmentbank,
+  title={The commitmentbank: Investigating projection in naturally occurring discourse},
+  author={De Marneffe, Marie-Catherine and Simons, Mandy and Tonhauser, Judith},
+  booktitle={proceedings of Sinn und Bedeutung},
+  volume={23},
+  number={2},
+  pages={107--124},
+  year={2019}
+}
+@article{Pavlichenko2021crowdspeech,
+  title="CrowdSpeech and VoxDIY: Benchmark Datasets for Crowdsourced Audio Transcription",
+  author="N. Pavlichenko and I. Stelmakh and D. Ustalov",
+  journal="arXiv preprint arXiv:2107.01091",
+  year="2021"
+}
+@misc{daves2016,   
+    title = {El Corpus del Español},   
+    url = {https://www.corpusdelespanol.org/},   
+    author = {M. Davies},   
+    year = {2016}
+}
+@misc{oldnews,   
+    title = {Old Newspapers},   
+    url = {https://www.kaggle.com/datasets/alvations/old-newspapers},
+    author = {Kaggle},
+    year = {2018}
+}
+@misc{jsdario2017,   
+    title = {El Quijote},   
+    url = {https://gist.github.com/jsdario/6d6c69398cb0c73111e49f1218960f79},   
+    author = {JS. Dario},   
+    year = {2017}
+}
+@misc{stanlex2012,   
+    title = {Stanford Lexical Resources},   
+    url = {http://web.stanford.edu/group/csli_lnr/Lexical_Resources/},   
+    author = {Stanford},   
+    year = {2012}
+}
+@inproceedings{eisele2010multiun,
+  title={Multiun: A multilingual corpus from united nation documents.},
+  author={Eisele, Andreas and Chen, Yu},
+  booktitle={LREC},
+  year={2010}
+}
+@INPROCEEDINGS{Gamallo95,
+  author =       "P. Gamallo and M. Garc{\'i}a and C. Pi{\~n}eiro, R. Mart{\'i}ez-Casta{\~n}o and J.C. Pichel",
+  title =        "{LinguaKit: a Big Data-based multilingual tool for linguistic analysis and information extraction.}",
+  booktitle =    "In Proceedings of The Second International Workshop on Advances in Natural Language Processing (ANLP 2018) co-located at SNAMS-2018",
+  pages =        "239-244",
+  year=           "2018",
+  url =     "http://dx.doi.org/10.1109%2FSNAMS.2018.8554689"
 }
 
-@inproceedings{baker,
-author = {Baker, B. S.},
-title = {On Finding Duplication and Near-duplication in Large Software Systems},
-booktitle = {Proceedings of the Second Working Conference on Reverse Engineering},
-series = {WCRE '95},
-year = {1995},
-isbn = {0-8186-7111-4},
-pages = {86--},
-url = {http://dl.acm.org/citation.cfm?id=832303.836911},
-acmid = {836911},
-publisher = {IEEE Computer Society},
-address = {Washington, DC, USA},
-keywords = {constants, debugging, dup, experimental results, large software systems, program debugging, redocumentation, software duplication, software tools, system documentation, system reengineering, systematic substitution, systems analysis, systems re-engineering, variable names},
+%%% FactBank and Related
+@article{sauri2009factbank,
+  title={FactBank: a corpus annotated with event factuality},
+  author={Saur{\'\i}, Roser and Pustejovsky, James},
+  journal={Language resources and evaluation},
+  volume={43},
+  number={3},
+  pages={227--268},
+  year={2009},
+  publisher={Springer}
+}
+@article{sauri2012you,
+  title={Are you sure that this happened? assessing the factuality degree of events in text},
+  author={Saur{\'\i}, Roser and Pustejovsky, James},
+  journal={Computational linguistics},
+  volume={38},
+  number={2},
+  pages={261--299},
+  year={2012},
+  publisher={MIT Press One Rogers Street, Cambridge, MA 02142-1209, USA journals-info~…}
+}
+@article{de2012did,
+  title={Did it happen? The pragmatic complexity of veridicality assessment},
+  author={de Marneffe, Marie-Catherine and Manning, Christopher D and Potts, Christopher},
+  journal={Computational linguistics},
+  volume={38},
+  number={2},
+  pages={301--333},
+  year={2012},
+  publisher={MIT Press One Rogers Street, Cambridge, MA 02142-1209, USA journals-info~…}
+}
+
+%%% SNLI, MNLI, XNLI
+@article{bowman2015large,
+  title={A large annotated corpus for learning natural language inference},
+  author={Bowman, Samuel R and Angeli, Gabor and Potts, Christopher and Manning, Christopher D},
+  journal={arXiv preprint arXiv:1508.05326},
+  year={2015}
+}
+@article{williams2017broad,
+  title={A broad-coverage challenge corpus for sentence understanding through inference},
+  author={Williams, Adina and Nangia, Nikita and Bowman, Samuel R},
+  journal={arXiv preprint arXiv:1704.05426},
+  year={2017}
+}
+@article{conneau2018xnli,
+  title={XNLI: Evaluating cross-lingual sentence representations},
+  author={Conneau, Alexis and Lample, Guillaume and Rinott, Ruty and Williams, Adina and Bowman, Samuel R and Schwenk, Holger and Stoyanov, Veselin},
+  journal={arXiv preprint arXiv:1809.05053},
+  year={2018}
+}
+
+%%%Pavlick
+@inproceedings{ross2019well,
+  title={How well do NLI models capture verb veridicality?},
+  author={Ross, Alexis and Pavlick, Ellie},
+  booktitle={Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)},
+  pages={2230--2240},
+  year={2019}
+}
+@article{pavlick2019inherent,
+  title={Inherent disagreements in human textual inferences},
+  author={Pavlick, Ellie and Kwiatkowski, Tom},
+  journal={Transactions of the Association for Computational Linguistics},
+  volume={7},
+  pages={677--694},
+  year={2019},
+  publisher={MIT Press}
+}
+
+%%% Others
+@article{falk2017towards,
+  title={Towards an inferential lexicon of event selecting predicates for French},
+  author={Falk, Ingrid and Martin, Fabienne},
+  journal={arXiv preprint arXiv:1710.01095},
+  year={2017}
+}
+@inproceedings{zaenen2013veridicity,
+  title={Veridicity annotation in the lexicon? A look at factive adjectives},
+  author={Zaenen, Annie and Karttunen, Lauri},
+  booktitle={Proceedings of the 9th joint ISO-ACL SIGSEM workshop on interoperable semantic annotation},
+  pages={51--58},
+  year={2013}
+}
+@inproceedings{de2019commitmentbank,
+  title={The commitmentbank: Investigating projection in naturally occurring discourse},
+  author={De Marneffe, Marie-Catherine and Simons, Mandy and Tonhauser, Judith},
+  booktitle={proceedings of Sinn und Bedeutung},
+  volume={23},
+  number={2},
+  pages={107--124},
+  year={2019}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%    MODALITY     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@article{morante2012modality,
+  title={Modality and negation: An introduction to the special issue},
+  author={Morante, Roser and Sporleder, Caroline},
+  journal={Computational linguistics},
+  volume={38},
+  number={2},
+  pages={223--260},
+  year={2012},
+  publisher={MIT Press One Rogers Street, Cambridge, MA 02142-1209, USA journals-info~…}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%    MOOD SPA     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PHD
+@book{faulkner2021systematic,
+  title={A Systematic Investigation of the Spanish Subjunctive: Mood Variation in Subjunctive Clauses},
+  author={Faulkner, Tris J},
+  year={2021},
+  publisher={Georgetown University}
+}
+%%% General
+@article{mejias1998pragmatic,
+  title={Pragmatic presupposition and old information in the use of the subjunctive mood in Spanish},
+  author={Mej{\'\i}as-Bikandi, Errapel},
+  journal={Hispania},
+  pages={941--948},
+  year={1998},
+  publisher={JSTOR}
+}
+@article{di2005italiano,
+  title={Italiano y espa{\~n}ol: la alternancia indicativo/subjuntivo en dos lenguas afines},
+  author={Di Franco, Cinzia},
+  journal={l{\'\i}nea], en AISPI, Actas XXIII, Palermo. Centro Virtual Cervantes, p{\'a}gs},
+  pages={175--186},
+  year={2005}
+}
+@article{villalta2008mood,
+  title={Mood and gradability: an investigation of the subjunctive mood in Spanish},
+  author={Villalta, Elisabeth},
+  journal={Linguistics and philosophy},
+  volume={31},
+  number={4},
+  pages={467--522},
+  year={2008},
+  publisher={Springer}
+}
+@article{sanchez2011aproximacion,
+  title={Una aproximaci{\'o}n te{\'o}rica a la definici{\'o}n del modo verbal espa{\~n}ol},
+  author={S{\'a}nchez-Jim{\'e}nez, David},
+  year={2011}
+}
+@article{calvo1995modo,
+  title={Sobre el modo verbal en espa{\~n}ol},
+  author={Calvo, Jos{\'e} Manuel Gonz{\'a}lez},
+  journal={Anuario de estudios filol{\'o}gicos},
+  number={18},
+  pages={177--204},
+  year={1995},
+  publisher={Servicio de Publicaciones}
+}
+%%% Doubt and possibility
+@article{kratochvilova2013seleccion,
+  title={Selecci{\'o}n de modo indicativo o subjuntivo con adverbios como quiz{\'a} (s), tal vez, posiblemente y probablemente},
+  author={Kratochv{\'\i}lov{\'a}, Dana and others},
+  journal={Acta Universitatis Carolinae Philologica},
+  number={2},
+  pages={137--148},
+  year={2013},
+  publisher={Univerzita Karlova v Praze, Nakladatelstv{\'\i} Karolinum}
+}
+@article{sabador2016uso,
+  title={Uso de indicativo y subjuntivo en los adverbios de modalidad epist{\'e}mica de incertidumbre. Estudio en un corpus informatizado},
+  author={Sabador, Mar{\'\i}a Jos{\'e} Barrios},
+  journal={E-Aesla},
+  number={2},
+  pages={260--273},
+  year={2016},
+  publisher={Asociaci{\'o}n Espa{\~n}ola de Ling{\"u}{\'\i}stica Aplicada, AESLA}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%    VERIDICALITY     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@article{karttunen1975conventional,
+  title={Conventional Implicature in Montague Grammar’, In BLS 1: Proceedings of the First Annual Meeting of the Berkeley Linguistics Society. Berkeley, Calif},
+  author={Karttunen, Lauri and Peters, Stanley},
+  year={1975}
+}
+@incollection{giannakidou2014non,
+  title={(Non) veridicality, evaluation, and event actualization: evidence from the subjunctive in relative clauses},
+  author={Giannakidou, Anastasia},
+  booktitle={Nonveridicality and Evaluation},
+  pages={17--49},
+  year={2014},
+  publisher={Brill}
+}
+@inproceedings{giannakidou2015mixed,
+  title={Mixed (Non) veridicality and mood choice with emotive verbs},
+  author={Giannakidou, Anastasia and Mari, Alda},
+  booktitle={CLS 51},
+  year={2015}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%    TASKS     %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+@inproceedings{dagan2005pascal,
+  title={The pascal recognising textual entailment challenge},
+  author={Dagan, Ido and Glickman, Oren and Magnini, Bernardo},
+  booktitle={Machine Learning Challenges Workshop},
+  pages={177--190},
+  year={2005},
+  organization={Springer}
+}
+@inproceedings{rosa2019overview,
+  title={Overview of FACT at IberLEF 2019: Factuality Analysis and Classification Task},
+  author={Ros{\'a}, Aiala and Castell{\'o}n, Irene and Chiruzzo, Luis and Curell, Hortensia and Etcheverry, Math{\'\i}as and Montraveta, Ana Fern{\'a}ndez and V{\'a}zquez, Gl{\`o}ria and Wonsever, Dina},
+  booktitle={IberLEF@ SEPLN},
+  year={2019}
+}
+@inproceedings{rosa2020overview,
+  title={Overview of FACT at IberLEF 2020: Events Detection and Classification.},
+  author={Ros{\'a}, Aiala and Alemany, Laura Alonso and Castell{\'o}n, Irene and Chiruzzo, Luis and Curell, Hortensia and Montraveta, Ana Fern{\'a}ndez and G{\'o}ngora, Santiago and Malcuori, Marisa and V{\'a}zquez, Gl{\`o}ria and Wonsever, Dina},
+  booktitle={IberLEF@ SEPLN},
+  pages={197--205},
+  year={2020}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%    SPECIFICITY     %%
+%%%%%%%%%%%%%%%%%%%%%%%%
+@book{sperber1986relevance,
+  title={Relevance: Communication and cognition},
+  author={Sperber, Dan and Wilson, Deirdre},
+  volume={142},
+  year={1986},
+  publisher={Citeseer}
+}
+@article{ariel1990accessing,
+  title={Accessing Noun-Phrase Antecedents. Vol. 96. Londres: Routlege},
+  author={Ariel, Mira},
+  journal={Linguistics},
+  pages={113--118},
+  year={1990}
+}
+@article{figueras2002jerarquia,
+  title={La jerarqu{\'\i}a de la accesibilidad de las expresiones referenciales en espa{\~n}ol},
+  author={Figueras, Carolina},
+  journal={Revista espa{\~n}ola de ling{\"u}{\'\i}stica},
+  volume={32},
+  number={1},
+  pages={53--96},
+  year={2002}
+}
+@book{garcia1998presuposiciones,
+  title={Las presuposiciones ling{\"u}{\'\i}sticas},
+  author={Garc{\'\i}a Murga, Fernando},
+  year={1998},
+  publisher={Servicio Editorial de la Universidad del Pa{\'\i}s Vasco/Euskal Herriko~…}
+}
+@phdthesis{caudet1999expresiones,
+  title={Las expresiones referenciales. Estudio sem{\'a}ntico del sintagma nominal},
+  author={Caudet, Mar{\'\i}a Amparo Alcina},
+  year={1999},
+  school={Universitat de Val{\`e}ncia}
+}
+@inproceedings{garcia2000sintagmas,
+  title={Los sintagmas nominales con referencia gen{\'e}rica},
+  author={Garc{\'\i}a, Inmaculada Sol{\'\i}s},
+  booktitle={Nuevas perspectivas en la ense{\~n}anza del espa{\~n}ol como lengua extranjera: Actas del X Congreso Internacional de ASELE (C{\'a}diz, 22-25 de septiembre de 1999)},
+  pages={695--704},
+  year={2000},
+  organization={Servicio de Publicaciones}
+}
+@article{sentis2001presuposicion,
+  title={La Presuposici{\'o}n como Categor{\'\i}a Pragm{\'a}tica: un caso de confrontaci{\'o}n epistemol{\'o}gica},
+  author={Sentis, Franklin},
+  journal={Onom{\'a}zein},
+  number={6},
+  pages={105--148},
+  year={2001}
+}
+@phdthesis{herrasti2011caracteristicas,
+  title={Caracter{\'\i}sticas sem{\'a}nticas definitorias de la presuposici{\'o}n},
+  author={Herrasti, Lucille and others},
+  year={2011},
+  school={El Colegio de M{\'e}xico}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%    OTHERS     %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+@article{rajpurkar2016squad,
+  title={Squad: 100,000+ questions for machine comprehension of text},
+  author={Rajpurkar, Pranav and Zhang, Jian and Lopyrev, Konstantin and Liang, Percy},
+  journal={arXiv preprint arXiv:1606.05250},
+  year={2016}
+}
+@article{devlin2018bert,
+  title={Bert: Pre-training of deep bidirectional transformers for language understanding},
+  author={Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+  journal={arXiv preprint arXiv:1810.04805},
+  year={2018}
+}
+@article{manning2006local,
+  title={Local textual inference: it’s hard to circumscribe, but you know it when you see it--and NLP needs it},
+  author={Manning, Christopher D},
+  year={2006},
+  publisher={Citeseer}
+}
+%%%Linguistics
+@book{espanola2010nueva,
+  title={Nueva gram{\'a}tica de la lengua espa{\~n}ola: Manual},
+  author= {Real Academia Espa{\~n}ola, RAE},
+  year={2011},
+  publisher={Espasa}
+}
+@book{lyons1995linguistic,
+  title={Linguistic semantics: An introduction},
+  author={Lyons, John},
+  year={1995},
+  publisher={Cambridge University Press}
+}
+@inproceedings{nairn2006computing,
+  title={Computing relative polarity for textual inference},
+  author={Nairn, Rowan and Condoravdi, Cleo and Karttunen, Lauri},
+  booktitle={Proceedings of the fifth international workshop on inference in computational semantics (icos-5)},
+  year={2006}
+}
+@article{rosen1999syntactic,
+  title={The syntactic representation of linguistic events},
+  author={Rosen, Sara Thomas and others},
+  journal={Glot international},
+  volume={4},
+  number={2},
+  pages={3--11},
+  year={1999}
+}
+@article{tenny2000history,
+  title={A history of events in linguistic theory},
+  author={Tenny, Carol and Pustejovsky, James},
+  journal={Events as grammatical objects},
+  volume={32},
+  pages={3--37},
+  year={2000},
+  publisher={CSLI Publications Stanford, CA}
+}
+%%%Stats
+@article{fleiss1971measuring,
+  title={Measuring nominal scale agreement among many raters.},
+  author={Fleiss, Joseph L},
+  journal={Psychological bulletin},
+  volume={76},
+  number={5},
+  pages={378},
+  year={1971},
+  publisher={American Psychological Association}
+}
+@article{conger1980integration,
+  title={Integration and generalization of kappas for multiple raters.},
+  author={Conger, Anthony J},
+  journal={Psychological Bulletin},
+  volume={88},
+  number={2},
+  pages={322},
+  year={1980},
+  publisher={American Psychological Association}
+}
+@article{cohen1960coefficient,
+  title={A coefficient of agreement for nominal scales},
+  author={Cohen, Jacob},
+  journal={Educational and psychological measurement},
+  volume={20},
+  number={1},
+  pages={37--46},
+  year={1960},
+  publisher={Sage Publications Sage CA: Thousand Oaks, CA}
 } 
-
-@InProceedings{koschke,
-author =	{Rainer Koschke},
-title =	{Survey of Research on Software Clones},
-booktitle =	{Duplication, Redundancy, and Similarity in Software},
-year =	{2007},
-editor =	{Rainer Koschke and Ettore Merlo and Andrew Walenstein},
-number =	{06301},
-series =	{Dagstuhl Seminar Proceedings},
-ISSN =	{1862-4405},
-publisher =	{Internationales Begegnungs- und Forschungszentrum f{\"u}r Informatik (IBFI), Schloss Dagstuhl, Germany},
-address =	{Dagstuhl, Germany},
-URL =		{http://drops.dagstuhl.de/opus/volltexte/2007/962},
-annote =	{Keywords: Software redundancy, code clone, software evolution, clone detector, empirical evaluation}
+@article{warrens2012equivalences,
+  title={Equivalences of weighted kappas for multiple raters},
+  author={Warrens, Matthijs J},
+  journal={Statistical Methodology},
+  volume={9},
+  number={3},
+  pages={407--422},
+  year={2012},
+  publisher={Elsevier}
 }
-
-@inproceedings{krinke,
-author = {Krinke, Jens},
-title = {Identifying Similar Code with Program Dependence Graphs},
-booktitle = {Proceedings of the Eighth Working Conference on Reverse Engineering (WCRE'01)},
-series = {WCRE '01},
-year = {2001},
-isbn = {0-7695-1303-4},
-pages = {301--},
-url = {http://dl.acm.org/citation.cfm?id=832308.837142},
-acmid = {837142},
-publisher = {IEEE Computer Society},
-address = {Washington, DC, USA},
-} 
-
-@InProceedings{merlo,
-author =	{Ettore Merlo},
-title =	{Detection of Plagiarism in University Projects Using Metrics-based Spectral Similarity},
-booktitle =	{Duplication, Redundancy, and Similarity in Software},
-year =	{2007},
-editor =	{Rainer Koschke and Ettore Merlo and Andrew Walenstein},
-number =	{06301},
-series =	{Dagstuhl Seminar Proceedings},
-ISSN =	{1862-4405},
-publisher =	{Internationales Begegnungs- und Forschungszentrum f{\"u}r Informatik (IBFI), Schloss Dagstuhl, Germany},
-address =	{Dagstuhl, Germany},
-URL =		{http://drops.dagstuhl.de/opus/volltexte/2007/986},
-annote =	{Keywords: Plagiarism detection, software comparison, clone detection, spectral analysis, code metrics}
+@article{warrens2014corrected,
+  title={Corrected Zegers-ten Berge coefficients are special cases of Cohen’s weighted kappa},
+  author={Warrens, Matthijs J},
+  journal={Journal of Classification},
+  volume={31},
+  number={2},
+  pages={179--193},
+  year={2014},
+  publisher={Springer}
 }
-
-@ARTICLE{bruijn,
-    author = {N. G. De Bruijn},
-    title = {Lambda calculus notation with nameless dummies, a tool for automatic formula manipulation, with application to the Church-Rosser Theorem},
-    journal = {INDAG. MATH},
-    year = {1972},
-    volume = {34},
-    pages = {381--392}
+@article{nelson2015measures,
+  title={Measures of agreement between many raters for ordinal classifications},
+  author={Nelson, Kerrie P and Edwards, Don},
+  journal={Statistics in medicine},
+  volume={34},
+  number={23},
+  pages={3116--3132},
+  year={2015},
+  publisher={Wiley Online Library}
 }
+@article{christensen2018cumulative,
+  title={Cumulative link models for ordinal regression with the R package ordinal},
+  author={Christensen, Rune Haubo B},
+  journal={Submitted in J. Stat. Software},
+  volume={35},
+  year={2018}
+}
+@article{berry2008weighted,
+  title={Weighted kappa for multiple raters},
+  author={Berry, Kenneth J and Johnston, Janis E and Mielke Jr, Paul W},
+  journal={Perceptual and motor skills},
+  volume={107},
+  number={3},
+  pages={837--848},
+  year={2008},
+  publisher={SAGE Publications Sage CA: Los Angeles, CA}
+}
+@article{berry1988generalization,
+  title={A generalization of Cohen's kappa agreement measure to interval measurement and multiple raters},
+  author={Berry, Kenneth J and Mielke Jr, Paul W},
+  journal={Educational and Psychological Measurement},
+  volume={48},
+  number={4},
+  pages={921--933},
+  year={1988},
+  publisher={Sage Publications Sage CA: Thousand Oaks, CA}
+}
+@misc{gwet2019irrcac,
+  title={IrrCAC: Computing Chance-Correcte Agreement Coefficients (CAC) version 1.0},
+  author={Gwet, KL},
+  year={2019}
+}
+@article{shrout1998measurement,
+  title={Measurement reliability and agreement in psychiatry},
+  author={Shrout, Patrick E},
+  journal={Statistical methods in medical research},
+  volume={7},
+  number={3},
+  pages={301--317},
+  year={1998},
+  publisher={Sage Publications Sage CA: Thousand Oaks, CA}
+}
+@article{vanacore2022robustness,
+  title={Robustness of $\kappa$-type coefficients for clinical agreement},
+  author={Vanacore, Amalia and Pellegrino, Maria Sole},
+  journal={Statistics in Medicine},
+  volume={41},
+  number={11},
+  pages={1986--2004},
+  year={2022},
+  publisher={Wiley Online Library}
+}
+@article{brennan1981coefficient,
+  title={Coefficient kappa: Some uses, misuses, and alternatives},
+  author={Brennan, Robert L and Prediger, Dale J},
+  journal={Educational and psychological measurement},
+  volume={41},
+  number={3},
+  pages={687--699},
+  year={1981},
+  publisher={Sage Publications Sage CA: Thousand Oaks, CA}
+}
+@article{gwet2008computing,
+  title={Computing inter-rater reliability and its variance in the presence of high agreement},
+  author={Gwet, Kilem Li},
+  journal={British Journal of Mathematical and Statistical Psychology},
+  volume={61},
+  number={1},
+  pages={29--48},
+  year={2008},
+  publisher={Wiley Online Library}
+}
+@book{gwet2014handbook,
+  title={Handbook of inter-rater reliability: The definitive guide to measuring the extent of agreement among raters},
+  author={Gwet, Kilem L},
+  year={2014},
+  publisher={Advanced Analytics, LLC}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%    DISAGREEMENT   %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-@inproceedings{idioms,
- author = {Allamanis, Miltiadis and Sutton, Charles},
- title = {Mining Idioms from Source Code},
- booktitle = {Proceedings of the 22Nd ACM SIGSOFT International Symposium on Foundations of Software Engineering},
- series = {FSE 2014},
- year = {2014},
- isbn = {978-1-4503-3056-5},
- location = {Hong Kong, China},
- pages = {472--483},
- numpages = {12},
- url = {http://doi.acm.org/10.1145/2635868.2635901},
- doi = {10.1145/2635868.2635901},
- acmid = {2635901},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {code idioms, naturalness of source code, syntactic code patterns},
-} 
+@article{nie2020can,
+  title={What can we learn from collective human opinions on natural language inference data?},
+  author={Nie, Yixin and Zhou, Xiang and Bansal, Mohit},
+  journal={arXiv preprint arXiv:2010.03532},
+  year={2020}
+}
+@inproceedings{gordon2021disagreement,
+  title={The disagreement deconvolution: Bringing machine learning performance metrics in line with reality},
+  author={Gordon, Mitchell L and Zhou, Kaitlyn and Patel, Kayur and Hashimoto, Tatsunori and Bernstein, Michael S},
+  booktitle={Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems},
+  pages={1--14},
+  year={2021}
+}
+@article{uma2021learning,
+  title={Learning from disagreement: A survey},
+  author={Uma, Alexandra N and Fornaciari, Tommaso and Hovy, Dirk and Paun, Silviu and Plank, Barbara and Poesio, Massimo},
+  journal={Journal of Artificial Intelligence Research},
+  volume={72},
+  pages={1385--1470},
+  year={2021}
+}
+@article{waltermire2017mood,
+  title={Mood variation after expressions of uncertainty in Spanish},
+  author={Waltermire, Mark},
+  journal={Studies in Hispanic and Lusophone Linguistics},
+  volume={10},
+  number={2},
+  pages={349--372},
+  year={2017},
+  publisher={De Gruyter Mouton}
+}

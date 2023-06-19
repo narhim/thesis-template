@@ -1,3 +1,4 @@
+
 %!TEX root = Thesis.tex
 %% ----------------------------------------------------------------
 %% Author: Alex Schlosser
@@ -31,12 +32,21 @@
 \usepackage{listings}
 \lstset{language=C,numbers=left}
 \usepackage{longtable}
+%My packages
+
 \usepackage{multicol}
 
+\usepackage[shortlabels]{enumitem}
+\usepackage{leipzig}
+\newleipzig{ger}{ger}{gerund}
+\newleipzig{impers}{impers}{impersonal}
+\usepackage{gb4e}
 
 %% Specify thesis parameters here
 %% ----------------------------------------------------------------
 \setboolean  {proposal}{false} % disables all stuff that is not needed for a proposal if set to true
+
+
 \university  {Saarland University}{http://www.uni-saarland.de/}
 \department  {Department of Language Science and Technology}{https://www.uni-saarland.de/en/department/lst.html}
 \group       {Chair}{http://www.st.cs.uni-saarland.de/}
@@ -48,7 +58,7 @@
 \degree      {Master of Language Science and Technology}
 \thesiskind  {Master Thesis}
 \authors     {Teresa Rosa Martín Soeder}
-\thesistitle {Veridicality Annotations in Spanish}
+\thesistitle {Crowdsourcing veridicality annotations in Spanish: How much do speakers disagree?}
 \date        {\today}
 %\subject     {}
 %\keywords    {}
@@ -131,9 +141,17 @@
 %% The Acknowledgements page, for thanking everyone
 %% ----------------------------------------------------------------
 \begin{acknowledgements}
-
-Thx Mom+Dad $<3$
-
+\begin{center}
+The list of who to thank is long, can words be enough? The obvious start is with both my supervisors, Lucia and Vera, thanks to their guidance \textit{this} has come through. Then there is of course Toloka since without their grant I would not have been able to finance my study. Last, but not least, all the people whose support and advice have brought me here:\\
+My father, whose path into academia I try to follow;\\
+My mother, whose love for languages I inherit;\\
+Each of my seven siblings, by blood or by law: three countries, two continents, one heart;\\
+My friends back south, who never deterred me from trying new things;\\
+And the friends from different corners of the world whom I have been lucky enough to encounter here.\\
+The path has been long and not always easy, you have not left my side and I will not forget it. May this be one of the many journeys we will share together and may each of your dreams become real in the most splendid way.\\
+\bigskip
+\textit{THANK YOU! ¡MUCHÍSIMAS GRACIAS! VIELEN DANK!}\\
+\end{center}
 \end{acknowledgements}
 \cleardoublepage
 }
@@ -159,8 +177,9 @@ Thx Mom+Dad $<3$
 % Capitalized chaptertitles generally look better
 
 \loadchapter{introduction}{Introduction}
-\loadchapter{pilot_study}{Pilot Study}
-\loadchapter{main_study}{Main Study}
+\loadchapter{background}{Background}
+\loadchapter{pilotstudy}{Pilot Study}
+\loadchapter{mainstudy}{Main Study}
 \loadchapter{conclusions}{Conclusions}
 
 \clearpage
@@ -171,9 +190,8 @@ Thx Mom+Dad $<3$
 
 %\input{./Appendices/AppendixA} % Appendix Title
 
-%\input{./Appendices/AppendixB} % Appendix Title
-
-%\input{./Appendices/AppendixC} % Appendix Title
+%\input{./Appendices/pilotiaa} % Appendix Title
+%\input{./Appendices/pilotmodel} % Appendix Title
 
 
 \backmatter
@@ -201,5 +219,11 @@ Thx Mom+Dad $<3$
 \bibliography{Bibliography}  % The references (bibliography) information are stored in the file named "Bibliography.bib"
 
 \beginappendix %Begins the appendix
-\loadappendix{Appendix}{This is my appendix}
+%\loadappendix{AppendixA}{This is a trial}
+%\loadappendix{AppendixB}{This is another trial}
+\loadappendix{pilotiaa}{Pilot Study: Inter-Annotator Agreement Scores}\label{app:piliaa}
+\loadappendix{pilotmodel}{Pilot Study: Cumulative Link Mixed Model}\label{app:pilmodel}
+\loadappendix{extramodels}{Main Study: CLMMs with Most Frequent Matrices}
+
+
 \end{document}  % The End
