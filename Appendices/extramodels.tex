@@ -1,0 +1,132 @@
+%!TEX root = ../Thesis.tex
+\label{app:extra}
+\section{Predictors: Mood}
+%\afterpage{
+\begin{minipage}{\linewidth}
+%\captionof{table}{Random effects resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{8}{|c|}{Model Scorers}\\\hline
+link  &  Threshold & Nobs & logLik & AIC & niter & max.grad & cond.H\\\hline
+logit & flexible & $1701$ & $-3125.09$ & $6270.18$ & $1024(2105)$ & $5.04\times 10^{-3}$ & $1.4\times 10^{2}$\\\hline
+\end{tabular}
+%\label{tab:modrand}
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+%\captionof{table}{Estimations, standard errors, z and p values for the different cofficients of the cumulative link mixed model. "con" stands for condition, "cat" stands for category, and ":" indicates crossed effect.}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	\multicolumn{5}{|c|}{Model Coefficients}\\\hline
+	Coefficient & Estimate & Std. Error & z value &Pr($>|z|$)\\\hline
+	MOOD_CONDITIONindicative  & $-0.5769$ & $0.1156$ & $-4.990$ & $6.05\times10^{07}$\\\hline
+	MOOD_CONDITIONsubjunctive & $-0.6338$ & $0.1161$ & $-5.462$ & $4.72\times10^{08}$\\\hline
+	\end{tabular}
+	%\label{tab:mod2} 
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+%\captionof{table}{Random effects resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Model Random Effects}\\\hline
+Groups  &  Name       &  Variance & Std.Dev.\\\hline
+PAIR  & Intercept & $0.080$   & $0.283$  \\\hline
+RATER & Intercept & $0.014$   & $0.120$ \\\hline
+\end{tabular}
+%\label{tab:modrand}
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+%\captionof{table}{Threshold coefficients resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Model Threshold Coefficients}\\\hline
+Threshold &  Estimate & Std. Error & z value\\\hline
+CT-|PR- & $-3.075$ & $0.126$ &$-24.447$\\\hline
+PR-|PS- & $-2.100$ & $0.102$ &$-19.769$\\\hline
+PS-|Uu  & $-1.383$ & $0.094$ &$-14.741$\\\hline
+Uu|PS+  & $-0.888$ & $0.090$ &$ -9.905$\\\hline
+PS+|PR+ & $-0.200$ & $0.087$ &$ -2.308$\\\hline
+PR+|CT+ & $ 0.560$ & $0.088$ &$  6.376$\\\hline
+\end{tabular}
+%\label{tab:appmodthres}
+\end{minipage}
+
+%!TEX root = ../Thesis.tex
+\section{Predictors: Mood and Matrix}
+%\afterpage{
+\begin{minipage}{\linewidth}
+%\captionof{table}{Random effects resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{8}{|c|}{Model Scorers}\\\hline
+link  &  Threshold & Nobs & logLik & AIC & niter & max.grad & cond.H\\\hline
+logit & flexible & $1701$ & $-3112.90$ & $6269.81$ & $3528(7150)$ & $5.04\times 3.19^{-3}$ & $2.6\times 10^{3}$\\\hline
+\end{tabular}
+%\label{tab:modrand}
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+%\captionof{table}{Estimations, standard errors, z and p values for the different cofficients of the cumulative link mixed model. "con" stands for condition, "cat" stands for category, and ":" indicates crossed effect.}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	\multicolumn{5}{|c|}{Model Coefficients}\\\hline
+	Coefficient & Estimate & Std. Error & z value &Pr($>|z|$)\\\hline
+	MOOD\_CONDITIONindicative                  & $-0.699$ & $0.297$ & $-2.352$ & $  0.019$\\\hline
+	MOOD\_CONDITIONsubjunctive                 & $-1.309$ & $0.305$ & $-4.293$ & $1.76\times 10^{05}$\\\hline
+	MATRIXconsiderar                          & $-0.404$ & $0.292$ & $-1.383$ & $  0.167$\\\hline
+	MATRIXcreer                               & $-0.584$ & $0.280$ & $-2.088$ & $  0.037$\\\hline
+	MATRIXdecir                               & $-0.139$ & $0.312$ & $-0.445$ & $  0.656$\\\hline
+	MATRIXsaber                               & $-0.053$ & $0.252$ & $-0.210$ & $  0.834$\\\hline
+	MOOD\_CONDITIONindicative:MATRIXconsiderar & $ 0.252$ & $0.405$ & $ 0.622$ & $  0.534$\\\hline
+	MOOD\_CONDITIONsubjunctive:MATRIXconsiderar& $ 0.807$ & $0.401$ & $ 2.013$ & $  0.044$\\\hline
+	MOOD\_CONDITIONindicative:MATRIXcreer      & $ 0.154$ & $0.390$ & $ 0.395$ & $  0.693$\\\hline
+	MOOD\_CONDITIONsubjunctive:MATRIXcreer     & $ 0.836$ & $0.393$ & $ 2.130$ & $  0.033$\\\hline
+	MOOD\_CONDITIONindicative:MATRIXdecir      & $-0.125$ & $0.422$ & $-0.295$ & $  0.768$\\\hline
+	MOOD\_CONDITIONsubjunctive:MATRIXdecir     & $ 0.677$ & $0.441$ & $ 1.535$ & $  0.125$\\\hline
+	MOOD\_CONDITIONindicative:MATRIXsaber      & $ 0.156$ & $0.345$ & $ 0.451$ & $  0.652$\\\hline
+	MOOD\_CONDITIONsubjunctive:MATRIXsaber     & $ 0.767$ & $0.352$ & $ 2.179$ & $  0.029$\\\hline
+	\end{tabular}
+	%\label{tab:mod2} 
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+%\captionof{table}{Random effects resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Model Random Effects}\\\hline
+Groups  &  Name       &  Variance & Std.Dev.\\\hline
+PAIR  & Intercept & $0.028$   & $0.167$  \\\hline
+RATER & Intercept & $0.014$   & $0.120$ \\\hline
+\end{tabular}
+%\label{tab:modrand}
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+%\captionof{table}{Threshold coefficients resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Model Threshold Coefficients}\\\hline
+Threshold &  Estimate & Std. Error & z value\\\hline
+CT-|PR- & $-3.289$ & $0.239$ & $-13.781$\\\hline
+PR-|PS- & $-2.225$ & $0.227$ & $ -9.804$\\\hline
+PS-|Uu  & $-1.600$ & $0.223$ & $ -7.157$\\\hline
+Uu|PS+  & $-1.105$ & $0.222$ & $ -4.987$\\\hline
+PS+|PR+ & $-0.417$ & $0.220$ & $ -1.899$\\\hline
+PR+|CT+ & $ 0.343$ & $0.219$ & $  1.564$\\\hline
+\end{tabular}
+%\label{tab:appmodthres}
+\end{minipage}

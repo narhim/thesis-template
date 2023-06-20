@@ -1,0 +1,71 @@
+%!TEX root = ../Thesis.tex
+%\afterpage{
+\begin{minipage}{\linewidth}
+%\captionof{table}{Random effects resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{8}{|c|}{Model Scorers}\\\hline
+link  &  Threshold & Nobs & logLik & AIC & niter & max.grad & cond.H\\\hline
+logit & flexible & $1530$ & $-2456.68$ & $4961.36$ & $4502(13559)$ & $5.68\times 10^{-3}$ & $8.5\times 10^{2}$\\\hline
+\end{tabular}
+\label{tab:modrand}
+\end{minipage}
+\newline
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+%\captionof{table}{Estimations, standard errors, z and p values for the different cofficients of the cumulative link mixed model. "con" stands for condition, "cat" stands for category, and ":" indicates crossed effect.}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	\multicolumn{5}{|c|}{Model Coefficients}\\\hline
+	Coefficient & Estimate & Std. Error & z value &Pr($>|z|$)\\\hline
+	moodconadverb                                 &$2.151$ &$0.282$& $7.632$&$2.31\times10^{-14}$\\\hline
+	moodcatindicative                             &$0.427$ &$ 0.311$ & $ 1.371$&$0.170$ \\\hline
+	moodcatsubjunctive                            &$-0.063$ & $ 0.305$ & $-0.206$&$0.836$\\\hline
+	specificityconcollective                      &$-0.199$ & $0.250$ & $-0.797$&$0.425$\\\hline
+	specificitycatmixed                           &$0.280$& $0.329$ & $0.851$&$0.395$\\\hline
+	specificitycatproper                          &$0.024$ &$0.328$&$0.072$&$0.9426$\\\hline
+	moodconadverb:moodcatindicative               &$-3.028$ & $0.334$ &$-9.072$&$< 2\times10^{-16}$\\\hline
+	moodconadverb:moodcatsubjunctive              &$-2.868$ &$0.330$& $-8.676$&$< 2\times10^{-16}$\\\hline
+	specificityconcollective:specificitycatmixed  &$-0.291$& $0.311$ & $-0.933$&$0.351$\\\hline
+	specificityconcollective:specificitycatproper &$0.107$ & $0.312$ &$0.344$&$0.731$\\\hline
+	moodconadverb:specificityconcollective        &$0.494$ & $0.256$ & $1.928$&$0.054$\\\hline
+	moodcatindicative:specificitycatmixed        & $-0.209$ & $0.390$ & $-0.536$&$0.592$\\\hline
+	moodcatsubjunctive:specificitycatmixed       & $-0.366$ & $0.387$ & $-0.947$&$0.344$\\\hline
+	moodcatindicative:specificitycatproper       & $-0.346$ & $0.391$ & $-0.884$&$0.377$\\\hline
+	moodcatsubjunctive:specificitycatproper      & $-0.131$ & $0.387$ & $-0.338$&$0.735$\\\hline
+	\end{tabular}
+	\label{tab:mod2} 
+\end{minipage}
+\newpage
+\begin{minipage}{\linewidth}
+%\captionof{table}{Random effects resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Model Random Effects}\\\hline
+Groups  &  Name       &  Variance & Std.Dev.\\\hline
+PAIR  & Intercept & $0.512$   & $0.715$  \\\hline
+RATER & Intercept & $0.505$   & $0.710$ \\\hline
+\end{tabular}
+\label{tab:modrand}
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+%\captionof{table}{Threshold coefficients resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Model Threshold Coefficients}\\\hline
+Threshold &  Estimate & Std. Error & z value\\\hline
+NaS|CT- & $-4.254$ & $0.326$ & $-13.062$\\\hline
+CT-|PR- & $-3.272$ & $0.298$ & $-10.962$\\\hline
+PR-|PS- & $-2.756$ & $0.291$ & $ -9.480$\\\hline
+PS-|Uu  & $-2.371$ & $0.286$ & $ -8.277$\\\hline
+Uu|PS+  & $-0.904$ & $0.278$ & $ -3.249$\\\hline
+PS+|PR+ & $ 0.006$ & $0.277$ & $  0.023$\\\hline
+PR+|CT+ & $ 1.233$ & $0.279$ & $  4.415$\\\hline
+\end{tabular}
+\label{tab:appmodthres}
+\end{minipage}
