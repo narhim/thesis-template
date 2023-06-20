@@ -196,8 +196,6 @@
 \newcommand*{\thesistitle}[1]{\def\TITLE{#1}\title{#1}}
 \newcommand*{\supervisor}[1]{\def\supname{#1}}
 \newcommand*{\advisor}[1]{\def\advname{#1}}
-\newcommand*{\examiner}[1]{\def\examname{#1}}
-\newcommand*{\secondexaminer}[1]{\def\secondexamname{#1}}
 \newcommand*{\degree}[1]{\def\degreename{#1}}
 \newcommand*{\thesiskind}[1]{\def\thesisname{#1}}
 \newcommand*{\authors}[1]{\def\authornames{#1}}
@@ -252,10 +250,6 @@
       {\large Supervisor \\ \textbf{\supname} \\[0.6cm]}
       \smallskip
       {\large Advisor \\ \textbf{\advname} \\[1.1cm]}
-      \smallskip
-      \doifnotproposal{
-        {\large Reviewers \\ \textbf{\examname} \\ \textbf{\secondexamname} \\[0.75cm] }
-      }
       \bigskip
       {\large \@date \\[0.8cm]}
 
