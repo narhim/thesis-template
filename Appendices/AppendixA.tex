@@ -1,37 +1,274 @@
+\section{Pilot Study}
+\subsection{Inter-Annotator Agreement Scores}
 %!TEX root = ../Thesis.tex
 
-\begin{figure}
-\small
-\center
-This is a figure
-\caption{Example of a figure}
-\label{fig:example}
-\end{figure}
+\begin{minipage}{\linewidth}\begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{Agreement Scores}\\\hline
+Name & Value \\\hline
+Fleiss' $\kappa$ & $0.160$\\\hline
+Fleiss' $\kappa$ with linear weights & $0.177$\\\hline
+Conger's $\kappa$ with linear weights & $0.176$\\\hline
+Gwet's $AC_2$ with linear weights & $0.484$\\\hline
+\end{tabular}
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Agreement Scores for Experimental Conditions}\\\hline
+Subset &  $\kappa^{f}_{w}$ & $\kappa^{c}_{w}$ & $AC_2$\\\hline
+ALL & $0.177$ & $0.179$ & $0.484$\\\hline
+Negation & $0.094$ & $0.097$ & $0.388$\\\hline
+Possibility & $0.278$ & $0.278$ & $0.592$\\\hline
+Individual & $0.161$ & $0.162$ & $0.500$\\\hline
+Collective & $0.190$ & $0.192$ & $0.470$\\\hline
+\end{tabular}
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Agreement Scores for Different Combinations of 3 Raters}\\\hline
+Combination &  $\kappa^{f}_{w}$ & $\kappa^{c}_{w}$ & $AC_2$\\\hline
+ALL & $0,177$ & $0,179$ & $0,484$\\\hline
+R1, R2 and R3 & $0.170$ & $0.172$ & $0.501$\\\hline
+R1, R2 and R4 & $0.237$ & $0.239$ & $0.550$\\\hline
+R1, R2 and R5 & $0.219$ & $0.223$ & $0.493$ \\\hline
+R1, R3 and R4 & $0.181$ & $0.182$ & $0.527$ \\\hline
+R1, R3 and R5 & $0.177$ & $0.180$ & $0.478$ \\\hline
+R1, R4 and R5 & $0.242$ & $0.246$ & $0.527$ \\\hline
+R2, R3 and R4 & $0.133$ & $0.134$ & $0.469$ \\\hline
+R2, R3 and R5 & $0.099$ & $0.102$ & $0.396$ \\\hline
+R2, R4 and R5 & $0.162$ & $0.165$ & $0.447$ \\\hline
+R3, R4 and R5 & $0.147$ & $0.150$ & $0.450$\\\hline  
+\end{tabular}
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Agreement Scores for Different Label Reductions}\\\hline
+Reduction &  $\kappa^{f}_{w}$ & $\kappa^{c}_{w}$ & $AC_2$\\\hline
+ALL & $0,177$ & $0,179$ & $0,484$\\\hline
+No NaS & $0.190$ & $0.191$ & $0.469$ \\\hline
+PS with PR & $0.186$ & $0.187$ & $0.572$\\\hline
+PS with PR, no NaS & $0.204$ & $0.205$ & $0.537$\\\hline
+PR with CT, PS with Uu & $0.153$ & $0.155$ & $0.635$\\\hline
+PR with CT, PS with Uu, no NaS & $0.162$ & $0.164$ & $0.518$\\\hline
+PS with Uu & $0.204$ & $0.205$ & $0.590$\\\hline
+PS with Uu, no NaS & $0.224$ & $0.225$ & $0.550$\\\hline 
+\end{tabular}
+\end{minipage}
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\subsection{Cumulative Link Mixed Model}
+%!TEX root = ../Thesis.tex
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+%\afterpage{
+\begin{minipage}{\linewidth}
+%\captionof{table}{Random effects resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{8}{|c|}{Model Scorers}\\\hline
+link  &  Threshold & Nobs & logLik & AIC & niter & max.grad & cond.H\\\hline
+logit & flexible & $1530$ & $-2456.68$ & $4961.36$ & $4502(13559)$ & $5.68\times 10^{-3}$ & $8.5\times 10^{2}$\\\hline
+\end{tabular}
+\label{tab:modrand}
+\end{minipage}
+\newline
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+%\captionof{table}{Estimations, standard errors, z and p values for the different cofficients of the cumulative link mixed model. "con" stands for condition, "cat" stands for category, and ":" indicates crossed effect.}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	\multicolumn{5}{|c|}{Model Coefficients}\\\hline
+	Coefficient & Estimate & Std. Error & z value &Pr($>|z|$)\\\hline
+	moodconadverb                                 &$2.151$ &$0.282$& $7.632$&$2.31\times10^{-14}$\\\hline
+	moodcatindicative                             &$0.427$ &$ 0.311$ & $ 1.371$&$0.170$ \\\hline
+	moodcatsubjunctive                            &$-0.063$ & $ 0.305$ & $-0.206$&$0.836$\\\hline
+	specificityconcollective                      &$-0.199$ & $0.250$ & $-0.797$&$0.425$\\\hline
+	specificitycatmixed                           &$0.280$& $0.329$ & $0.851$&$0.395$\\\hline
+	specificitycatproper                          &$0.024$ &$0.328$&$0.072$&$0.9426$\\\hline
+	moodconadverb:moodcatindicative               &$-3.028$ & $0.334$ &$-9.072$&$< 2\times10^{-16}$\\\hline
+	moodconadverb:moodcatsubjunctive              &$-2.868$ &$0.330$& $-8.676$&$< 2\times10^{-16}$\\\hline
+	specificityconcollective:specificitycatmixed  &$-0.291$& $0.311$ & $-0.933$&$0.351$\\\hline
+	specificityconcollective:specificitycatproper &$0.107$ & $0.312$ &$0.344$&$0.731$\\\hline
+	moodconadverb:specificityconcollective        &$0.494$ & $0.256$ & $1.928$&$0.054$\\\hline
+	moodcatindicative:specificitycatmixed        & $-0.209$ & $0.390$ & $-0.536$&$0.592$\\\hline
+	moodcatsubjunctive:specificitycatmixed       & $-0.366$ & $0.387$ & $-0.947$&$0.344$\\\hline
+	moodcatindicative:specificitycatproper       & $-0.346$ & $0.391$ & $-0.884$&$0.377$\\\hline
+	moodcatsubjunctive:specificitycatproper      & $-0.131$ & $0.387$ & $-0.338$&$0.735$\\\hline
+	\end{tabular}
+	\label{tab:mod2} 
+\end{minipage}
+\newpage
+\begin{minipage}{\linewidth}
+%\captionof{table}{Random effects resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Model Random Effects}\\\hline
+Groups  &  Name       &  Variance & Std.Dev.\\\hline
+PAIR  & Intercept & $0.512$   & $0.715$  \\\hline
+RATER & Intercept & $0.505$   & $0.710$ \\\hline
+\end{tabular}
+\label{tab:modrand}
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+%\captionof{table}{Threshold coefficients resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Model Threshold Coefficients}\\\hline
+Threshold &  Estimate & Std. Error & z value\\\hline
+NaS|CT- & $-4.254$ & $0.326$ & $-13.062$\\\hline
+CT-|PR- & $-3.272$ & $0.298$ & $-10.962$\\\hline
+PR-|PS- & $-2.756$ & $0.291$ & $ -9.480$\\\hline
+PS-|Uu  & $-2.371$ & $0.286$ & $ -8.277$\\\hline
+Uu|PS+  & $-0.904$ & $0.278$ & $ -3.249$\\\hline
+PS+|PR+ & $ 0.006$ & $0.277$ & $  0.023$\\\hline
+PR+|CT+ & $ 1.233$ & $0.279$ & $  4.415$\\\hline
+\end{tabular}
+\label{tab:appmodthres}
+\end{minipage}
 
-Citations look as follows: \citep{bruijn}.
+\section{Main Study: CLMMs with Most Frequent Matrices}
+\subsection{Predictors: Mood}
+%\afterpage{
+\begin{minipage}{\linewidth}
+%\captionof{table}{Random effects resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{8}{|c|}{Model Scorers}\\\hline
+link  &  Threshold & Nobs & logLik & AIC & niter & max.grad & cond.H\\\hline
+logit & flexible & $1701$ & $-3125.09$ & $6270.18$ & $1024(2105)$ & $5.04\times 10^{-3}$ & $1.4\times 10^{2}$\\\hline
+\end{tabular}
+%\label{tab:modrand}
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+%\captionof{table}{Estimations, standard errors, z and p values for the different cofficients of the cumulative link mixed model. "con" stands for condition, "cat" stands for category, and ":" indicates crossed effect.}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	\multicolumn{5}{|c|}{Model Coefficients}\\\hline
+	Coefficient & Estimate & Std. Error & z value &Pr($>|z|$)\\\hline
+	MOOD\_CONDITIONindicative  & $-0.5769$ & $0.1156$ & $-4.990$ & $6.05\times10^{07}$\\\hline
+	MOOD\_CONDITIONsubjunctive & $-0.6338$ & $0.1161$ & $-5.462$ & $4.72\times10^{08}$\\\hline
+	\end{tabular}
+	%\label{tab:mod2} 
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+%\captionof{table}{Random effects resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Model Random Effects}\\\hline
+Groups  &  Name       &  Variance & Std.Dev.\\\hline
+PAIR  & Intercept & $0.080$   & $0.283$  \\\hline
+RATER & Intercept & $0.014$   & $0.120$ \\\hline
+\end{tabular}
+%\label{tab:modrand}
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+%\captionof{table}{Threshold coefficients resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Model Threshold Coefficients}\\\hline
+Threshold &  Estimate & Std. Error & z value\\\hline
+CT-|PR- & $-3.075$ & $0.126$ &$-24.447$\\\hline
+PR-|PS- & $-2.100$ & $0.102$ &$-19.769$\\\hline
+PS-|Uu  & $-1.383$ & $0.094$ &$-14.741$\\\hline
+Uu|PS+  & $-0.888$ & $0.090$ &$ -9.905$\\\hline
+PS+|PR+ & $-0.200$ & $0.087$ &$ -2.308$\\\hline
+PR+|CT+ & $ 0.560$ & $0.088$ &$  6.376$\\\hline
+\end{tabular}
+%\label{tab:appmodthres}
+\end{minipage}
 
-Figure \ref{fig:example} shows an example of a Figure.
-Table \ref{tab:example} shows an example of a Table.
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-\begin{table}
-\centering
-\begin{tabular}{|c|c|}
-\hline 
-a 	&	b\\
-\hline 
-c	&	d\\
-\hline 
-\end{tabular} 
-\caption{Example of a table}
-\label{tab:example}
-\end{table}
-
-
+%!TEX root = ../Thesis.tex
+\subsection{Predictors: Mood and Matrix}
+%\afterpage{
+\begin{minipage}{\linewidth}
+%\captionof{table}{Random effects resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{8}{|c|}{Model Scorers}\\\hline
+link  &  Threshold & Nobs & logLik & AIC & niter & max.grad & cond.H\\\hline
+logit & flexible & $1701$ & $-3112.90$ & $6269.81$ & $3528(7150)$ & $5.04\times 3.19^{-3}$ & $2.6\times 10^{3}$\\\hline
+\end{tabular}
+%\label{tab:modrand}
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+%\captionof{table}{Estimations, standard errors, z and p values for the different cofficients of the cumulative link mixed model. "con" stands for condition, "cat" stands for category, and ":" indicates crossed effect.}
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	\multicolumn{4}{|c|}{Model Coefficients}\\\hline
+	Coefficient & Estimate & Std. Error & Pr($>|z|$)\\\hline
+	MOOD\_CONDITIONindicative                  & $-0.699$ & $0.297$ & $  0.019$\\\hline
+	MOOD\_CONDITIONsubjunctive                 & $-1.309$ & $0.305$ & $1.76\times 10^{05}$\\\hline
+	MATRIXconsiderar                          & $-0.404$ & $0.292$ & $  0.167$\\\hline
+	MATRIXcreer                               & $-0.584$ & $0.280$ & $  0.037$\\\hline
+	MATRIXdecir                               & $-0.139$ & $0.312$ & $  0.656$\\\hline
+	MATRIXsaber                               & $-0.053$ & $0.252$ & $  0.834$\\\hline
+	MOOD\_CONDITIONindicative:MATRIXconsiderar & $ 0.252$ & $0.405$ & $  0.534$\\\hline
+	MOOD\_CONDITIONsubjunctive:MATRIXconsiderar& $ 0.807$ & $0.401$ & $  0.044$\\\hline
+	MOOD\_CONDITIONindicative:MATRIXcreer      & $ 0.154$ & $0.390$ & $  0.693$\\\hline
+	MOOD\_CONDITIONsubjunctive:MATRIXcreer     & $ 0.836$ & $0.393$ & $  0.033$\\\hline
+	MOOD\_CONDITIONindicative:MATRIXdecir      & $-0.125$ & $0.422$ & $  0.768$\\\hline
+	MOOD\_CONDITIONsubjunctive:MATRIXdecir     & $ 0.677$ & $0.441$ & $  0.125$\\\hline
+	MOOD\_CONDITIONindicative:MATRIXsaber      & $ 0.156$ & $0.345$ & $  0.652$\\\hline
+	MOOD\_CONDITIONsubjunctive:MATRIXsaber     & $ 0.767$ & $0.352$ & $  0.029$\\\hline
+	\end{tabular}
+	%\label{tab:mod2} 
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+%\captionof{table}{Random effects resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Model Random Effects}\\\hline
+Groups  &  Name       &  Variance & Std.Dev.\\\hline
+PAIR  & Intercept & $0.028$   & $0.167$  \\\hline
+RATER & Intercept & $0.014$   & $0.120$ \\\hline
+\end{tabular}
+%\label{tab:modrand}
+\end{minipage}
+\newline
+\newline
+\newline
+\begin{minipage}{\linewidth}
+%\captionof{table}{Threshold coefficients resulted from fixing a cumulative link mixed model the whole dataset with different combinations of mood conditions, mood categories, specificity conditions and specficity categories; and random intercepts for raters and premise-hypothesis pairs.}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Model Threshold Coefficients}\\\hline
+Threshold &  Estimate & Std. Error & z value\\\hline
+CT-|PR- & $-3.289$ & $0.239$ & $-13.781$\\\hline
+PR-|PS- & $-2.225$ & $0.227$ & $ -9.804$\\\hline
+PS-|Uu  & $-1.600$ & $0.223$ & $ -7.157$\\\hline
+Uu|PS+  & $-1.105$ & $0.222$ & $ -4.987$\\\hline
+PS+|PR+ & $-0.417$ & $0.220$ & $ -1.899$\\\hline
+PR+|CT+ & $ 0.343$ & $0.219$ & $  1.564$\\\hline
+\end{tabular}
+%\label{tab:appmodthres}
+\end{minipage}
